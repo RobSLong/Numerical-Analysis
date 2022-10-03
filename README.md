@@ -5,12 +5,12 @@ This repository contains projects focused around Numerical Analysis and each dir
 Each directory herein contains a self-contained project with the naming convention \<**application-method**\> e.g. DiffusionEq-FiniteDifferences is a project which describes how to solve the diffusion equation using the finite difference numerical scheme. The \<readme\> in each directory should provide enough information to understand the problem and provide a foundation for similar projects to be undertaken!
 
 ## Projects Highlights
- #### Advection
+ ### Advection
  This project outlines how to numerically solve the linear advection equation,
 $$\frac{\partial u}{\partial t}+v \dfrac{\partial u}{\partial x}=0.$$
  in 1D using both explicit and implicit finite difference formulations. We present an analysis of how the error scales with the computing time and suggest a method for **optimising** the numerical scheme to most efficiently reach a specified level of accuracy.
  <p align="center">
-<img src = "https://github.com/RobSLong/FD_Advection_comparison/blob/main/advection.gif" width="250" />
+<img src = "https://github.com/RobSLong/FD_Advection_comparison/blob/main/advection.gif" width="350" />
 </p>
        
 * #### Diffusion - solving the diffusion equation in both 1D and 2D with different data visualisation methods presented

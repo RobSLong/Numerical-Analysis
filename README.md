@@ -20,12 +20,10 @@ Each directory herein contains a self-contained project with the naming conventi
 <details><summary>CLICK ME</summary>
 <p>
            
-#### yes, even hidden code blocks!
-##### no, 
+* #### yes, even hidden code blocks!
+* ##### no, 
            
-```python
-print("hello world!")
-```
+
            
 </p>
 </details>

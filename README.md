@@ -1,6 +1,6 @@
 # Numerical-Analysis
 
-This repository contains projects linked to Numerical Analysis and each directory contains an individual project with the naming convention <application-nmethod> a.g. DiffusionEq-FiniteDifferences is a project which describes how to solve the diffusion equation using the finite difference numerical scheme.
+This repository contains projects focused around Numerical Analysis and each directory is intended to be a self-contained project with adequate enough documentation to be used as educational content. Each directory herein contains a self-contained project with the naming convention \<application-method\> e.g. DiffusionEq-FiniteDifferences is a project which describes how to solve the diffusion equation using the finite difference numerical scheme.
   
 Each project contains a readme file which is aimed to contain enough information to act as a standalone educational document to understand the problem and provide a foundation for similar projects to be undertaken!
 

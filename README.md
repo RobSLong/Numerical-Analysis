@@ -12,7 +12,6 @@ Each directory herein contains a self-contained project with the naming conventi
          </details>
          
 * ####  Advection
-* 
       * solving 1D
       * analysing how the error reduces with computing time
        

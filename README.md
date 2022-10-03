@@ -12,8 +12,10 @@ Each directory herein contains a self-contained project with the naming conventi
          </details>
          
 * ####  Advection
+* 
       * solving 1D
-       * analysing how the error reduces with computing time
+      * analysing how the error reduces with computing time
+       
 * #### Diffusion - solving the diffusion equation in both 1D and 2D with different data visualisation methods presented
 * simulating thermal convection using the Navier Stokes equations in 2D and how to verify and validate numerical solutions
 

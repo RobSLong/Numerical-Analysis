@@ -17,7 +17,11 @@ Each directory herein contains a self-contained project with the naming conventi
 * #### Diffusion - solving the diffusion equation in both 1D and 2D with different data visualisation methods presented
 * simulating thermal convection using the Navier Stokes equations in 2D and how to verify and validate numerical solutions
 
-<details>
-           <summary>Title 1</summary>
-           <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-         </details>
+<details><summary>CLICK ME</summary>
+<p>
+#### yes, even hidden code blocks!
+```python
+print("hello world!")
+```
+</p>
+</details>

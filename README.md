@@ -6,6 +6,7 @@ Each directory herein contains a self-contained project with the naming conventi
 
 ## Projects include
  - Advection
+ 
            - solving 1D
            - analysing how the error reduces with computing time
        

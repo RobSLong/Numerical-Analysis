@@ -11,3 +11,7 @@ Each directory herein contains a self-contained project with the naming conventi
 * #### Diffusion - solving the diffusion equation in both 1D and 2D with different data visualisation methods presented
 * simulating thermal convection using the Navier Stokes equations in 2D and how to verify and validate numerical solutions
 
+ * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2

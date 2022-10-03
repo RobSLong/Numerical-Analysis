@@ -17,3 +17,5 @@ This project outlines how to discretize and numerically solve the diffusion equa
 ### Thermal convection
 This project uses Dedalus (a spectral solver written in Python) to formulate and numerically solve the Navier Stokes equations to simulate 2D convection. The emphasis is on how to verify and validate numerical models and we do this through comparison with published solutions, comparing with linear theory and finally internal consistency checks.
 
+### Advection-Diffusion
+This project numerically simulates a scalar field that is advected by a constant wind and undergoes diffusion in 2D. The finite volume method is used here owing to being a conservative scheme. We present a parameter study which investigates how changing the relative importance of advective to diffusive processes can alter the types of solution.

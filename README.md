@@ -6,7 +6,7 @@ Each directory herein contains a self-contained project with the naming conventi
 
 ## Projects Highlights
  ### Advection
- This project outlines how to numerically solve the linear advection equation, $\dfrac{\partial u}{\partial t}+v \dfrac{\partial u}{\partial x}=0.$
+ This project outlines how to numerically solve the linear advection equation, $\dfrac{\partial u}{\partial t}+v \dfrac{\partial u}{\partial x}=0$
  in 1D using both explicit and implicit finite difference formulations. We present an analysis of how the error scales with the computing time and suggest a method for **optimising** the numerical scheme to most efficiently reach a specified level of accuracy. |
  <p align="center">
 <img src = "https://github.com/RobSLong/FD_Advection_comparison/blob/main/advection.gif" width="350" />

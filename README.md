@@ -6,20 +6,14 @@ Each directory herein contains a self-contained project with the naming conventi
 
 ## Projects Highlights
  ### Advection
-This project outlines how to numerically solve the linear advection equation in 1D using both explicit and implicit finite difference formulations. We present an analysis of how the error scales with the computing time and suggest a method for **optimising** the numerical scheme to most efficiently reach a specified level of accuracy. |
+This project outlines how to discretize and numerically solve the linear advection equation in 1D using both explicit and implicit finite difference formulations. We present an analysis of how the error scales with the computing time and suggest a method for **optimising** the numerical scheme to most efficiently reach a specified level of accuracy. |
  <p align="center">
 <img src = "https://github.com/RobSLong/FD_Advection_comparison/blob/main/advection.gif" width="350" />
 </p>
        
-* #### Diffusion - solving the diffusion equation in both 1D and 2D with different data visualisation methods presented
-* simulating thermal convection using the Navier Stokes equations in 2D and how to verify and validate numerical solutions
+### Diffusion 
+This project outlines how to discretize and numerically solve the diffusion equation in both 1D and 2D with different boundary conditions (Dirichlet and Neumann). We investigate how dimensionality affects the diffusive process and present different methods of visualising the numerical solutions.
 
-<details><summary>CLICK ME</summary>
-<p>
-          
-* yes, even hidden code blocks!
-*  no, 
-    
-</p>
-</details>
- (
+### Thermal convection
+This project uses Dedalus (a spectral solver written in Python) to formulate and numerically solve the Navier Stokes equations to simulate 2D convection. The emphasis is on how to verify and validate numerical models and we do this through comparison with published solutions, comparing with linear theory and finally internal consistency checks.
+

@@ -43,13 +43,10 @@ $$T(0) = T_1$$
 $$\dfrac{dT(Nx)}{dx}=0.$$
 In practice, the discretised evolution equation and boundary conditions are solved over all space $(j)$ and then looped over the total number of timesteps.
 
-Other explicit schemes exist and can be derived from different approximations of the gradient terms in an equation. Using the forward in time and forward in space approximations,
-$$\dfrac{\partial u}{\partial t} = \dfrac{u^{n+1}_j-u^n_j}{\Delta t}, \dfrac{\partial u}{\partial x} = \dfrac{u^n\_{j+1}-u^n\_{j}}{\Delta x},$$
-respectively.
-The FTFS scheme 
-$$u^{n+1}_j = u^n_j - c\left(u^n\_{j+1}-u^n\_{j}\right).$$
-This looks similar to the scheme discussed before but notice that the spatial derivative is now only approximated from the grid cell to the left. 
-Alternative schemes can be derived from different approximations, I suggest the reader to use Tannehill as a starting point.
+<p align="center">
+  <img src="Diff_SinIC.png" />
+</p>
+
 
 ## Implicit Scheme
 Unlike explicit schemes which use only values at the current and previous timesteps to predict the next-step, implicit schemes also use values at the time-step $(n+1)$ to calculate values at time-step, $n+1$. When correctly formulated, implicit schemes can be stable for arbitrarily large time-step, although they will not necessarily give high accuracy in time and they can be computationally expensive per time-step. 

@@ -36,13 +36,11 @@ $$\dfrac{T^{n+1}_j-T^n_j}{\Delta t} = \nu \dfrac{T^n\_{j+1}-2T^n_j+T^n\_{j-1}}{2
 
 $$T^{n+1}_j = \dfrac{\nu \Delta t}{\Delta x^2} \left(T^n\_{j+1}-2T^n_j+T^n\_{j-1} \right).$$
 
-where $c=v\Delta t/ \Delta x$, known as the Courant number. The Courant number indicates how much the information travels, if greater than one, it means that the information propagates through more than one grid cell at each time step, making the solution inaccurate and potentially leading to nonphysical results or divergence of the solution.
+where $C = \nu \Delta t/ \Delta x^2$, known as the Courant number. The Courant number indicates how far information travels, if greater than one, it means that the information propagates through more than one grid cell at each time step, making the solution inaccurate and potentially leading to nonphysical results or divergence of the solution. Our chosen formulation is only stable when $C \leq 0.5$ and so we set $C=0.5$ for most of our calculations and compute our time-step to guarantee stability.
  
-To close the system, two boundary conditions are needed. We choose to apply the same discretisation scheme to the first node
-$$u^{n+1}_0=u^n_0-\dfrac{c}{2}\left(u^n_1-u^n\_{N-2} \right).$$
-The periodic boundary conditions dictate that the two boundary grid points have the same value,
-$$u^{n+1}\_{N-1}=u^{n+1}_0.$$
-
+To close the system, two boundary conditions are needed. We use both Dirichlet, Neumann and a combination of the two. Dirichlet boundaries specify the value itself on the boundary whereas Neumann conditions specify the flux across the boundary, if the spatial grid is labelled from 0 to $Nx$ inclusive, then a Dirichlet left boundary 
+$$T(0) = T_1$$
+$$\dfrac{dT(Nx)}{dx}=0.$$
 In practice, the discretised evolution equation and boundary conditions are solved over all space $(j)$ and then looped over the total number of timesteps.
 
 Other explicit schemes exist and can be derived from different approximations of the gradient terms in an equation. Using the forward in time and forward in space approximations,

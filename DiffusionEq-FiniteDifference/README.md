@@ -14,14 +14,12 @@ $$u(x,t)=u_0(x-ut).$$
 This analytical solution allows us to compute the error of different implementations and directly compare finite difference schemes against one another.
 
 ## Solving the Diffusion Equation in 1D
-The diffusion equation can be discretised on to a grid of points in space and time (indexed by $j$ and $n$, respectively). Here, we implement the forward in time and centred in space scheme which approximates derivatives by
+The diffusion equation can be discretised on to a grid of points in space and time (indexed by $j$ and $n$, respectively). Here, we implement the forward in time and centred in space (FTCS) scheme which approximates temporal and spatial derivatives, respectively, as
 $$\dfrac{\partial T}{\partial t} = \dfrac{T^{n+1}_j-T^n_j}{\Delta t}, \dfrac{\partial^2 T}{\partial x^2} = \dfrac{T^n\_{j+1}-2T^n_j+T^n\_{j-1}}{2 \Delta x},$$
-respectively.
 
-The discretised equation reads
+The discretised equation then reads
 $$ \dfrac{T^{n+1}_j-T^n_j}{\Delta t}= \nu \dfrac{T^n\_{j+1}-2T^n_j+T^n\_{j-1}}{2 \Delta x},$$
 $$T^{n+1}_j = \dfrac{\nu \Delta t}{\Delta x^2} \left(T^n\_{j+1}-2T^n_j+T^n\_{j-1} \right).$$
-
 where $c=v\Delta t/ \Delta x$, known as the Courant number. The Courant number indicates how much the information travels, if greater than one, it means that the information propagates through more than one grid cell at each time step, making the solution inaccurate and potentially leading to nonphysical results or divergence of the solution.
  
 To close the system, two boundary conditions are needed. We choose to apply the same discretisation scheme to the first node

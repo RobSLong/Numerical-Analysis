@@ -19,6 +19,7 @@ $$\dfrac{\partial T}{\partial t} = \dfrac{T^{n+1}_j-T^n_j}{\Delta t}, \dfrac{\pa
 
 The discretised equation then reads
 $$ \dfrac{T^{n+1}_j-T^n_j}{\Delta t}= \nu \dfrac{T^n_{j+1}-2T^n_j+T^n\_{j-1}}{2 \Delta x},$$
+
 $$T^{n+1}_j = \dfrac{\nu \Delta t}{\Delta x^2} \left(T^n\_{j+1}-2T^n_j+T^n\_{j-1} \right).$$
 where $c=v\Delta t/ \Delta x$, known as the Courant number. The Courant number indicates how much the information travels, if greater than one, it means that the information propagates through more than one grid cell at each time step, making the solution inaccurate and potentially leading to nonphysical results or divergence of the solution.
  

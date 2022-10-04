@@ -2,9 +2,7 @@
 
 ## Summary
 
-<p align="center">
-<img src = "https://github.com/RobSLong/FD_Advection_comparison/blob/main/advection.gif" width="500" />
-</p>
+
 
 ## Numerically solving the diffusion equation
 Diffusion describes motion from high concenrtation to low concentration; think of how the amount of heat you feel from a radiator decreases with increasing distance. The time-dependent diffusion equation for a scalar field, $T$, is given by
@@ -19,13 +17,11 @@ This analytical solution allows us to compute the error of different implementat
 The diffusion equation can be discretised on to a grid of points in space and time (indexed by $j$ and $n$, respectively). Here, we implement the forward in time and centred in space scheme which approximates derivatives by
 $$\dfrac{\partial T}{\partial t} = \dfrac{T^{n+1}_j-T^n_j}{\Delta t}, \dfrac{\partial^2 T}{\partial x^2} = \dfrac{T^n\_{j+1}-2T^n_j+T^n\_{j-1}}{2 \Delta x},$$
 respectively.
-<p align="center">
-  <img src="explicit_solution.png" width="500" />
-  <img src="/implicit_solution.png" width="500" /> 
-</p>
+
 The discretised equation reads
 $$ \dfrac{T^{n+1}_j-T^n_j}{\Delta t}= \nu \dfrac{T^n\_{j+1}-2T^n_j+T^n\_{j-1}}{2 \Delta x},$$
-$$T^{n+1}_j = \dfrac{\nu \Delta t}{\Delta x^2}\left(\dfrac{T^n\_{j+1}-2T^n_j+T^n\_{j-1}\right).$$
+$$T^{n+1}_j = \dfrac{\nu \Delta t}{\Delta x^2} \left(T^n\_{j+1}-2T^n_j+T^n\_{j-1} \right).$$
+
 where $c=v\Delta t/ \Delta x$, known as the Courant number. The Courant number indicates how much the information travels, if greater than one, it means that the information propagates through more than one grid cell at each time step, making the solution inaccurate and potentially leading to nonphysical results or divergence of the solution.
  
 To close the system, two boundary conditions are needed. We choose to apply the same discretisation scheme to the first node

@@ -9,7 +9,9 @@ Diffusion describes motion from high concenrtation to low concentration; think o
 $$\dfrac{\partial T}{\partial t}= \nu \dfrac{\partial ^2 T}{\partial x^2}.$$
 Here $alpha$ is the diffusivity with units $m^2/s$.
 
-Looking at the governing equation we can use seperation of variables to write field, $T$, as $T=T(t,x)=f(t)g(x)$. For the solution to satisfy the equation, $f(t)$ must differentiate to give something that is proportional to itself - an exponential function has this property, $f(t)=\exp(-at))$. Here, $a$ is a constant to be determined and there must be a negative sign as the solution decreases with time. The spatial component should differentiate twice to give something proportional to itself so we choose a sinusoidal function, $g(x) = sin(\pi * x)$. Now, $T=exp(-a*t)sin(\pi x)$.
+Looking at the governing equation we can use seperation of variables to write field, $T$, as $T=T(t,x)=f(t)g(x)$. For the solution to satisfy the equation, $f(t)$ must differentiate to give something that is proportional to itself - an exponential function has this property, $f(t)=\exp(-at))$. Here, $a$ is a constant to be determined and there must be a negative sign as the solution decreases with time. The spatial component should differentiate twice to give something proportional to itself so we choose a sinusoidal function, $g(x) = sin(\pi * x)$. Now, $T=exp(-at)sin(\pi x)$. We can work out the value of a by subsituting T into the equation and carryying out the differenttation.
+$$\dfrac{\partial exp(-at)sin(\pi x)}{\partial t} = \nu \dfrac{\partial ^2 exp(-at)sin(\pi x)}{\partial x^2}$$
+$$-a exp(-at)sin(\pi x) = $\nu \pi^2 \exp(-at)sin(\pi x$
 
 For a given initial condition, $u_0=u(x,0)$, this equation has an analytical solution,
 $$u(x,t)=u_0(x-ut).$$

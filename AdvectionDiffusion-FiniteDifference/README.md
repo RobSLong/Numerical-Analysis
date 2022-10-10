@@ -2,6 +2,7 @@
 
 ##
 $$\dfrac{\partial c}{\partial t} + \boldsymbol{u} \cdot \boldsymbol{\nabla}c = \nu \nabla^2 c$$
+
 In 1D the flow has one component, $u$, and only one spatial coordinate is considered, $x$, which we will often refer to as the channel axis - 
 $$\dfrac{\partial c}{\partial t} + u \dfrac{\partial c}{\partial x} = \nu \dfrac{\partial^2 c}{\partial x^2}$$
 

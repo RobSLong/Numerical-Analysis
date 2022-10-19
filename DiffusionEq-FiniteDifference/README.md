@@ -31,6 +31,8 @@ $$T(0) = T_1,$$
 $$\dfrac{dT(Nx)}{dx}=0,$$
 respectively. In practice, the discretised evolution equation and boundary conditions are solved over all space $(j)$ and then looped over the total number of timesteps to obtain the final solution.
 
+
+The code to implement this is given in \<explicit.py\> and the solution is shown below. We plot the numerical solution every 300 timesteps to visually show how diffusion flattens the field with increasing time and spreads out. For two of the timesteps we have also shown the exact solution as black circles to show that the numerical solution is in good agreement with the expected profiles.
 <p align="center">
   <img src="figs/diff_sinIC.png" width="450">
 </p>

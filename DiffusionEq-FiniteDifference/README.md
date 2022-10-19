@@ -21,11 +21,15 @@ $$\dfrac{T^{n+1}_j-T^n_j}{\Delta t} = \nu \dfrac{T^n\_{j+1}-2T^n_j+T^n\_{j-1}}{2
 $$T^{n+1}_j = \dfrac{\nu \Delta t}{\Delta x^2} \left(T^n\_{j+1}-2T^n_j+T^n\_{j-1} \right).$$
 
 where $C = \nu \Delta t/ \Delta x^2$, known as the Courant number. The Courant number indicates how far information travels, if greater than one, it means that the information propagates through more than one grid cell at each time step, making the solution inaccurate and potentially leading to nonphysical results or divergence of the solution. Our chosen formulation is only stable when $C \leq 0.5$ and so we set $C=0.5$ for most of our calculations and compute our time-step to guarantee stability.
- 
-To close the system, two boundary conditions are needed. We use both Dirichlet, Neumann and a combination of the two. Dirichlet boundaries specify the value itself on the boundary whereas Neumann conditions specify the flux across the boundary, if the spatial grid is labelled from 0 to $Nx$ inclusive, then a Dirichlet left boundary 
-$$T(0) = T_1$$
-$$\dfrac{dT(Nx)}{dx}=0.$$
-In practice, the discretised evolution equation and boundary conditions are solved over all space $(j)$ and then looped over the total number of timesteps.
+
+Now we have derived the discretised equation we could write a program to advances a solution in time - we need an initial condition! Here, we will start by using a sinusoidal function,
+$$T_0=\sin(\pi x),$$
+and solve over the domain $0 \leq x \leq 1$. 
+
+Formally, to close the system, two boundary conditions are needed. Either a Dirichlet condition is used, where a value is specified on the boundary, or a Neumann condition which specifies the flux across the boundary. If $x$ is discretised into cells labelled from 0 to $Nx$ inclusive, then a Dirichlet left boundary condition and Neumann right boundary condition would read
+$$T(0) = T_1,$$
+$$\dfrac{dT(Nx)}{dx}=0,$$
+respectively. In practice, the discretised evolution equation and boundary conditions are solved over all space $(j)$ and then looped over the total number of timesteps to obtain the final solution.
 
 <p align="center">
   <img src="figs/diff_sinIC.png" width="450">

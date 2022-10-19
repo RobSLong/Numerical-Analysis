@@ -28,7 +28,7 @@ $$\dfrac{dT(Nx)}{dx}=0.$$
 In practice, the discretised evolution equation and boundary conditions are solved over all space $(j)$ and then looped over the total number of timesteps.
 
 <p align="center">
-  <img src="diff_sinIC.png" width="500">
+  <img src="figs/diff_sinIC.png" width="450">
 </p>
 
 
